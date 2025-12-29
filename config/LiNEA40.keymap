@@ -169,8 +169,8 @@
         MARK {
             bindings = <
 &kp EXCL          &kp AT        &kp HASH     &kp DOLLAR        &kp PERCENT                            &kp CARET         &kp AMPERSAND   &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp MINUS
-&kp LEFT_BRACKET  &kp CAPSLOCK  &kp JP_PIPE  &kp RIGHT_BRACE   &kp LC(PAUSE_BREAK)                    &kp SINGLE_QUOTE  &kp PIPE        &kp EQUAL     &kp COLON             &kp DOUBLE_QUOTES
-&kp PLUS          &trans        &trans       &trans            &kp RIGHT_BRACKET                      &kp BACKSLASH     &kp LEFT_BRACE  &trans        &trans                &kp JP_YEN
+&trans  &trans                  &trans       &trans                   &trans                        &trans  &trans          &trans          &trans           &trans
+&trans  &trans                  &trans       &trans                   &trans                        &trans  &trans          &trans          &trans           &trans
 &trans            &trans        &trans       &trans            &trans               &trans    &trans  &trans                            &trans        &trans                &PRINTSCREEN
             >;
 
