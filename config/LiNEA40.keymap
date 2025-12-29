@@ -57,7 +57,7 @@
         layers = <SCROLL>;
         input-processors =
             <&zip_xy_to_scroll_mapper>,
-            <&zip_wheel_scaler 1 2>; //スクロールを3倍速にする
+            <&zip_wheel_scaler 1 10>; //スクロールを1/10倍速にする
     };
 };
 
