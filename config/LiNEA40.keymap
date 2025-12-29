@@ -1,3 +1,4 @@
+THIS_SHOULD_BREAK_THE_BUILD;
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 150
 
 #include <dt-bindings/zmk/input_transform.h>
