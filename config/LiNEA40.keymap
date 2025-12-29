@@ -58,7 +58,8 @@
         input-processors =
             <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
             <&zip_xy_to_scroll_mapper>,
-            <&zip_wheel_scaler 1 4>; //スクロールを1/4倍速にする
+            <&zip_wheel_scaler 1 4>;
+ //スクロールを1/4倍速にする
     };
 };
 
@@ -164,7 +165,7 @@
         MARK {
             bindings = <
 &kp EXCL   &kp DOUBLE_QUOTES  &kp HASH  &kp DOLLAR      &kp PERCENT                            &kp AMPERSAND      &kp SINGLE_QUOTE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp MINUS
-&kp AT     &trans             &trans    &kp LEFT_BRACE  &kp LC(PAUSE_BREAK)                    &kp PRINTSCREEN    &kp RIGHT_BRACE   &kp CARET             &kp PLUS               &kp ASTRK
+&kp AT     &kp CAPSLOCK       &trans    &kp LEFT_BRACE  &kp LC(PAUSE_BREAK)                    &kp PRINTSCREEN    &kp RIGHT_BRACE   &kp CARET             &kp PLUS               &kp ASTRK
 &kp TILDE  &trans             &trans    &trans          &kp LEFT_BRACKET                       &kp RIGHT_BRACKET  &trans            &trans                &trans                 &kp BACKSLASH
 &trans     &trans             &trans    &trans          &trans               &trans    &trans  &trans                               &trans                &trans                 &trans
             >;
