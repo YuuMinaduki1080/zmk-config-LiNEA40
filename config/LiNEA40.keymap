@@ -15,6 +15,10 @@
 #define SCROLL 5
 #define WIRELESS 6
 
+#define JP_YEN          0x89              // ¥
+#define JP_PIPE         LS(0x89)          // |
+#define JP_UNDERSCORE   LS(0x87)          // _
+
 //mouse cursol
 
 &mmv {
@@ -164,10 +168,10 @@
 
         MARK {
             bindings = <
-&kp EXCL          &kp AT        &kp HASH      &kp DOLLAR        &kp PERCENT                            &kp CARET         &kp AMPERSAND   &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp MINUS
-&kp LEFT_BRACKET  &kp CAPSLOCK  &kp LS(0x89)  &kp RIGHT_BRACE   &kp LC(PAUSE_BREAK)                    &kp SINGLE_QUOTE  &kp PIPE        &kp EQUAL     &kp COLON    &kp DOUBLE_QUOTES
-&kp PLUS          &trans        &trans        &trans            &kp RIGHT_BRACKET                      &kp BACKSLASH     &kp LEFT_BRACE  &trans        &trans         &kp 0x89
-&trans            &trans        &trans        &trans            &trans               &trans    &trans  &trans            &trans          &trans        &PRINTSCREEN
+&kp EXCL          &kp AT        &kp HASH     &kp DOLLAR        &kp PERCENT                            &kp CARET         &kp AMPERSAND   &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp MINUS
+&kp LEFT_BRACKET  &kp CAPSLOCK  &kp JP_PIPE  &kp RIGHT_BRACE   &kp LC(PAUSE_BREAK)                    &kp SINGLE_QUOTE  &kp PIPE        &kp EQUAL     &kp COLON             &kp DOUBLE_QUOTES
+&kp PLUS          &trans        &trans       &trans            &kp RIGHT_BRACKET                      &kp BACKSLASH     &kp LEFT_BRACE  &trans        &trans                &kp JP_YEN
+&trans            &trans        &trans       &trans            &trans               &trans    &trans  &trans                            &trans        &trans                &PRINTSCREEN
             >;
 
             sensor-bindings = <&re_kp C_VOLUME_DOWN C_VOLUME_UP>;
