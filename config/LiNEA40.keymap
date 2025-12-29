@@ -14,7 +14,6 @@
 #define FUNCTION 4
 #define SCROLL 5
 #define WIRELESS 6
-
 #define JP_YEN          0x89              // ¥
 #define JP_PIPE         LS(0x89)          // |
 #define JP_UNDERSCORE   LS(0x87)          // _
@@ -63,7 +62,8 @@
             <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
             <&zip_xy_to_scroll_mapper>,
             <&zip_wheel_scaler 1 4>;
- //スクロールを1/4倍速にする
+
+        //スクロールを1/4倍速にする
     };
 };
 
@@ -168,10 +168,10 @@
 
         MARK {
             bindings = <
-&kp EXCL          &kp AT        &kp HASH     &kp DOLLAR        &kp PERCENT                            &kp CARET         &kp AMPERSAND   &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp MINUS
-&trans  &trans                  &trans       &trans                   &trans                        &trans  &trans          &trans          &trans           &trans
-&trans  &trans                  &trans       &trans                   &trans                        &trans  &trans          &trans          &trans           &trans
-&trans            &trans        &trans       &trans            &trans               &trans    &trans  &trans                            &trans        &trans                &PRINTSCREEN
+&kp LS(NUMBER_1)  &kp LS(NUMBER_2)  &kp LS(NUMBER_3)  &kp LS(NUMBER_4)  &kp LS(NUMBER_5)                       &kp LS(NUMBER_6)  &kp LS(NUMBER_7)  &kp LS(NUMBER_8)  &kp LS(NUMBER_9)  &kp MINUS
+&kp LEFT_BRACKET  &kp CAPSLOCK      &trans            &kp RIGHT_BRACE   &kp LC(PAUSE_BREAK)                    &kp SINGLE_QUOTE  &kp PIPE          &kp EQUAL         &kp COLON         &kp DOUBLE_QUOTES
+&kp PLUS          &trans            &trans            &trans            &kp RIGHT_BRACKET                      &kp BACKSLASH     &kp LEFT_BRACE    &trans            &trans            &trans
+&trans            &trans            &trans            &trans            &trans               &trans    &trans  &trans                              &trans            &trans            &kp PRINTSCREEN
             >;
 
             sensor-bindings = <&re_kp C_VOLUME_DOWN C_VOLUME_UP>;
