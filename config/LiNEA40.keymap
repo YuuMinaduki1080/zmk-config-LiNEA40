@@ -8,12 +8,15 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
 
+// レイヤー定義
 #define MOUSE 1
 #define MARK 2
 #define CURSOR 3
 #define FUNCTION 4
 #define SCROLL 5
 #define WIRELESS 6
+
+// 日本語キー定義
 #define JP_YEN          0x89              // ¥
 #define JP_PIPE         LS(0x89)          // |
 #define JP_UNDERSCORE   LS(0x87)          // _
@@ -61,9 +64,7 @@
         input-processors =
             <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
             <&zip_xy_to_scroll_mapper>,
-            <&zip_wheel_scaler 1 4>;
-
-        //スクロールを1/4倍速にする
+            <&zip_wheel_scaler 1 4>; //スクロールを1/4倍速にする
     };
 };
 
@@ -169,8 +170,8 @@
         MARK {
             bindings = <
 &kp LS(NUMBER_1)  &kp LS(NUMBER_2)  &kp LS(NUMBER_3)  &kp LS(NUMBER_4)  &kp LS(NUMBER_5)                       &kp LS(NUMBER_6)  &kp LS(NUMBER_7)  &kp LS(NUMBER_8)  &kp LS(NUMBER_9)  &kp MINUS
-&kp LEFT_BRACKET  &kp CAPSLOCK      &trans            &kp RIGHT_BRACE   &kp LC(PAUSE_BREAK)                    &kp SINGLE_QUOTE  &kp PIPE          &kp EQUAL         &kp COLON         &kp DOUBLE_QUOTES
-&kp PLUS          &trans            &trans            &trans            &kp RIGHT_BRACKET                      &kp BACKSLASH     &kp LEFT_BRACE    &trans            &trans            &trans
+&kp LEFT_BRACKET  &kp CAPSLOCK      &kp JP_PIPE       &kp RIGHT_BRACE   &kp LC(PAUSE_BREAK)                    &kp SINGLE_QUOTE  &kp PIPE          &kp EQUAL         &kp COLON         &kp DOUBLE_QUOTES
+&kp PLUS          &trans            &trans            &trans            &kp RIGHT_BRACKET                      &kp BACKSLASH     &kp LEFT_BRACE    &trans            &trans            &kp JP_YEN
 &trans            &trans            &trans            &trans            &trans               &trans    &trans  &trans                              &trans            &trans            &kp PRINTSCREEN
             >;
 
