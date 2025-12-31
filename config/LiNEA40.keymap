@@ -169,10 +169,10 @@
 
         MARK {
             bindings = <
-&kp NUMBER_1      &kp NUMBER_2      &kp NUMBER_3       &kp NUMBER_4         &kp NUMBER_5                       &kp NUMBER_6      &kp NUMBER_7    &kp NUMBER_8      &kp NUMBER_9       &kp NUMBER_0
-&kp LEFT_BRACKET  &kp JP_PIPE       &kp RIGHT_BRACKET  &kp BACKSLASH        &kp MINUS                          &kp SINGLE_QUOTE  &kp SEMICOLON   &kp COLON         &kp DOUBLE_QUOTES  &kp LS(MINUS)
-&kp CAPSLOCK      &kp PLUS          &kp EQUAL          &kp LC(PAUSE_BREAK)  &kp RIGHT_BRACE                    &kp PIPE          &kp JP_YEN      &kp LS(COMMA)     &kp LS(DOT)        &kp JP_UNDERSCORE
-&trans            &trans            &kp LEFT_ALT       &trans               &trans           &trans    &trans  &trans                            &kp LEFT_BRACE    &trans             &kp PRINTSCREEN
+&kp NUMBER_1      &kp NUMBER_2      &kp NUMBER_3       &kp NUMBER_4         &kp NUMBER_5                            &kp NUMBER_6      &kp NUMBER_7    &kp NUMBER_8      &kp NUMBER_9       &kp NUMBER_0
+&kp LEFT_BRACKET  &kp JP_PIPE       &kp RIGHT_BRACKET  &kp BACKSLASH        &kp MINUS                               &kp SINGLE_QUOTE  &kp SEMICOLON   &kp COLON         &kp DOUBLE_QUOTES  &kp LS(MINUS)
+&kp CAPSLOCK      &kp PLUS          &kp EQUAL          &kp LC(PAUSE_BREAK)  &kp RIGHT_BRACE                         &kp PIPE          &kp JP_YEN      &kp LS(COMMA)     &kp LS(DOT)        &kp JP_UNDERSCORE
+&trans            &trans            &kp LEFT_ALT       &trans               &trans           &LEFT_SHIFT    &trans  &trans                            &kp LEFT_BRACE    &trans             &kp PRINTSCREEN
             >;
 
             sensor-bindings = <&re_kp C_VOLUME_DOWN C_VOLUME_UP>;
