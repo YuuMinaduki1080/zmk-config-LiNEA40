@@ -169,10 +169,10 @@
 
         MARK {
             bindings = <
-&kp NUMBER_1      &kp NUMBER_2      &kp NUMBER_3       &kp NUMBER_4         &kp NUMBER_5                        &kp NUMBER_6      &kp NUMBER_7    &kp NUMBER_8      &kp NUMBER_9       &kp NUMBER_0
-&kp LEFT_BRACKET  &kp JP_PIPE       &kp RIGHT_BRACKET  &kp BACKSLASH        &kp LS(MINUS)                       &kp SINGLE_QUOTE  &kp SEMICOLON   &kp COLON         &kp DOUBLE_QUOTES  &kp LS(MINUS)
-&kp CAPSLOCK      &kp PLUS          &kp EQUAL          &kp LC(PAUSE_BREAK)  &kp RIGHT_BRACE                     &kp PIPE          &kp JP_YEN      &kp LS(COMMA)     &kp LS(DOT)        &kp JP_UNDERSCORE
-&trans            &trans            &kp LEFT_ALT       &trans               &trans            &trans    &trans  &trans                            &kp LEFT_BRACE    &trans             &kp PRINTSCREEN
+&kp NUMBER_1      &kp NUMBER_2      &kp NUMBER_3       &kp NUMBER_4         &kp NUMBER_5                       &kp NUMBER_6      &kp NUMBER_7    &kp NUMBER_8      &kp NUMBER_9       &kp NUMBER_0
+&kp LEFT_BRACKET  &kp JP_PIPE       &kp RIGHT_BRACKET  &kp BACKSLASH        &kp MINUS                          &kp SINGLE_QUOTE  &kp SEMICOLON   &kp COLON         &kp DOUBLE_QUOTES  &kp LS(MINUS)
+&kp CAPSLOCK      &kp PLUS          &kp EQUAL          &kp LC(PAUSE_BREAK)  &kp RIGHT_BRACE                    &kp PIPE          &kp JP_YEN      &kp LS(COMMA)     &kp LS(DOT)        &kp JP_UNDERSCORE
+&trans            &trans            &kp LEFT_ALT       &trans               &trans           &trans    &trans  &trans                            &kp LEFT_BRACE    &trans             &kp PRINTSCREEN
             >;
 
             sensor-bindings = <&re_kp C_VOLUME_DOWN C_VOLUME_UP>;
@@ -193,10 +193,10 @@
 
         FUNCTION {
             bindings = <
-&kp NUMBER_1           &kp NUMBER_2       &kp NUMBER_3        &kp NUMBER_4  &kp NUMBER_5                                         &kp NUMBER_6  &kp NUMBER_7    &kp NUMBER_8    &kp NUMBER_9  &kp NUMBER_0
-&kp F1                 &kp F2             &kp F3              &kp F4        &kp F5                                               &kp F6        &kp F7          &kp F8          &kp F9        &kp F10
-&mt LEFT_SHIFT HOME    &kp LC(PAGE_DOWN)  &kp LC(PAGE_UP)     &kp END       &kp F11                                              &kp F12       &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW
-&mt LEFT_SHIFT ESCAPE  &kp LEFT_WIN       &mt LEFT_ALT GRAVE  &trans        &mt LEFT_CONTROL SPACE  &kp BACKSPACE    &kp DELETE  &trans        &trans          &trans          &mt RIGHT_SHIFT BACKSLASH
+&kp NUMBER_1           &kp NUMBER_2       &kp NUMBER_3        &kp NUMBER_4  &kp NUMBER_5                                    &kp NUMBER_6  &kp NUMBER_7    &kp NUMBER_8    &kp NUMBER_9  &kp NUMBER_0
+&kp F1                 &kp F2             &kp F3              &kp F4        &kp F5                                          &kp F6        &kp F7          &kp F8          &kp F9        &kp F10
+&mt LEFT_SHIFT HOME    &kp LC(PAGE_DOWN)  &kp LC(PAGE_UP)     &kp END       &kp F11                                         &kp F12       &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW
+&mt LEFT_SHIFT ESCAPE  &kp LEFT_WIN       &mt LEFT_ALT GRAVE  &trans        &mt LEFT_CONTROL SPACE  &kp PLUS    &kp DELETE  &trans        &trans          &trans          &mt RIGHT_SHIFT BACKSLASH
             >;
 
             sensor-bindings = <&mouse_scrl SCRL_DOWN SCRL_UP>;
