@@ -9,7 +9,6 @@
 #include <dt-bindings/zmk/pointing.h>
 
 // レイヤー定義
-
 #define MOUSE 1
 #define MARK 2
 #define CURSOR 3
@@ -18,13 +17,11 @@
 #define WIRELESS 6
 
 // 日本語キー定義
-
 #define JP_YEN          0x89              // ¥
 #define JP_PIPE         LS(0x89)          // |
 #define JP_UNDERSCORE   LS(0x87)          // _
 
 //mouse cursol
-
 &mmv {
     delay-ms = <20>;
     trigger-period-ms = <5>;
@@ -33,7 +30,6 @@
 };
 
 //mouse scroll
-
 &msc {
     delay-ms = <3>;
     trigger-period-ms = <3>;
@@ -66,9 +62,7 @@
         input-processors =
             <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
             <&zip_xy_to_scroll_mapper>,
-            <&zip_wheel_scaler 1 4>;
-
-        //スクロールを1/4倍速にする
+            <&zip_wheel_scaler 1 4>; //スクロールを1/4倍速にする
     };
 };
 
