@@ -67,7 +67,8 @@
             <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
             <&zip_xy_to_scroll_mapper>,
             <&zip_wheel_scaler 1 4>;
- //スクロールを1/4倍速にする
+
+        //スクロールを1/4倍速にする
     };
 };
 
@@ -93,6 +94,11 @@
         Semicolon {
             bindings = <&kp SEMICOLON>;
             key-positions = <17 18>;
+        };
+
+        Minus {
+            bindings = <&kp MINUS>;
+            key-positions = <19 18>;
         };
     };
 
