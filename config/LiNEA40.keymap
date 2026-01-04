@@ -66,6 +66,11 @@
     };
 };
 
+//input key
+&mkp_input_listener {
+    input-processors = <&zip_temp_layer 5 500>;
+};
+
 / {
     combos {
         compatible = "zmk,combos";
@@ -101,9 +106,9 @@
             compatible = "zmk,behavior-hold-tap";
             label = "homehow-mods";
             #binding-cells = <2>;
-            tapping-term-ms = <175>;
+            tapping-term-ms = <150>;
             flavor = "tap-preferred";
-            quick-tap-ms = <150>;
+            quick-tap-ms = <125>;
             global-quick-tap;
             bindings = <&kp>, <&kp>; 
         };
