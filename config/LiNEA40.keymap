@@ -96,6 +96,11 @@
             key-positions = <17 18>;
         };
 
+        Underscore {
+            bindings = <&kp JP_UNDERSCORE>;
+            key-positions = <18 19>;
+        };
+
         SingleQuote {
             bindings = <&kp LS(MINUS)>;
             key-positions = <6 7>;
@@ -104,11 +109,6 @@
         DoubleQuote {
             bindings = <&kp RS(N2)>;
             key-positions = <7 8>;
-        };
-
-        Underscore {
-            bindings = <&kp UNDER>;
-            key-positions = <18 19>;
         };
     };
 
