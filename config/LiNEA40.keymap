@@ -68,7 +68,8 @@
             <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
             <&zip_xy_to_scroll_mapper>,
             <&zip_wheel_scaler 1 4>;
- //スクロールを1/4倍速にする
+
+        //スクロールを1/4倍速にする
     };
 };
 
@@ -90,13 +91,13 @@
             key-positions = <11 12>;
         };
 
-        Colon {
-            bindings = <&kp SINGLE_QUOTE>;
+        Minus {
+            bindings = <&kp MINUS>;
             key-positions = <16 17>;
         };
 
-        Semicolon {
-            bindings = <&kp SEMICOLON>;
+        Equal {
+            bindings = <&kp LS(MINUS)>;
             key-positions = <17 18>;
         };
 
@@ -226,10 +227,10 @@
 
         MARK {
             bindings = <
-&kp NUMBER_1      &kp NUMBER_2  &kp NUMBER_3       &kp NUMBER_4         &kp NUMBER_5                              &kp EQUAL   &kp MINUS      &kp RIGHT_BRACKET  &kp BACKSLASH  &kp LEFT_BRACKET
-&kp LEFT_BRACKET  &kp JP_PIPE   &kp RIGHT_BRACKET  &kp BACKSLASH        &kp MINUS                                 &kp LS(N6)  &kp LS(MINUS)  &kp LS(N8)         &kp LS(N9)     &trans
-&kp LEFT_SHIFT    &kp PLUS      &kp EQUAL          &kp LC(PAUSE_BREAK)  &kp RIGHT_BRACE                           &trans      &kp PLUS       &kp RIGHT_BRACE    &kp PIPE       &trans
-&kp CAPSLOCK      &trans        &hm LEFT_ALT PLUS  &trans               &trans           &kp BACKSPACE    &trans  &trans                     &kp LEFT_BRACE     &trans         &kp PRINTSCREEN
+&kp NUMBER_1      &kp NUMBER_2  &kp NUMBER_3       &kp NUMBER_4         &kp NUMBER_5                              &kp EQUAL   &kp LEFT_BRACE  &kp RIGHT_BRACKET  &kp BACKSLASH  &kp LEFT_BRACKET
+&kp LEFT_BRACKET  &kp JP_PIPE   &kp RIGHT_BRACKET  &kp BACKSLASH        &kp MINUS                                 &kp LS(N6)  &kp LS(N7)      &kp LS(N8)         &kp LS(N9)     &trans
+&kp LEFT_SHIFT    &kp PLUS      &kp EQUAL          &kp LC(PAUSE_BREAK)  &kp RIGHT_BRACE                           &trans      &kp PLUS        &kp RIGHT_BRACE    &kp PIPE       &trans
+&kp CAPSLOCK      &trans        &hm LEFT_ALT PLUS  &trans               &trans           &kp BACKSPACE    &trans  &trans                      &trans             &trans         &kp PRINTSCREEN
             >;
 
             sensor-bindings = <&re_kp C_VOLUME_DOWN C_VOLUME_UP>;
