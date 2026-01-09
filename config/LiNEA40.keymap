@@ -9,6 +9,7 @@
 #include <dt-bindings/zmk/pointing.h>
 
 // レイヤー定義
+
 #define MARK 1
 #define FUNCTION 2
 #define CURSOR 3
@@ -18,11 +19,13 @@
 #define WIRELESS 7
 
 // 日本語キー定義
+
 #define JP_YEN          0x89              // ¥
 #define JP_PIPE         LS(0x89)          // |
 #define JP_UNDERSCORE   LS(0x87)          // _
 
 //mouse cursol
+
 &mmv {
     delay-ms = <20>;
     trigger-period-ms = <5>;
@@ -31,6 +34,7 @@
 };
 
 //mouse scroll
+
 &msc {
     delay-ms = <3>;
     trigger-period-ms = <3>;
@@ -63,14 +67,14 @@
         input-processors =
             <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
             <&zip_xy_to_scroll_mapper>,
-            <&zip_wheel_scaler 1 4>; //スクロールを1/4倍速にする
+            <&zip_wheel_scaler 1 4>;
+ //スクロールを1/4倍速にする
     };
 };
 
 //input key
-&mkp_input_listener {
-    input-processors = <&zip_temp_layer 4 500>;
-};
+
+&mkp_input_listener { input-processors = <&zip_temp_layer 4 500>; };
 
 / {
     combos {
@@ -78,12 +82,12 @@
 
         HankakuZenkaku {
             bindings = <&kp CAPSLOCK>;
-            key-positions = <12 11>;
+            key-positions = <12 13>;
         };
 
         Tab {
             bindings = <&kp TAB>;
-            key-positions = <10 11>;
+            key-positions = <11 12>;
         };
 
         Colon {
@@ -96,9 +100,14 @@
             key-positions = <17 18>;
         };
 
-        Minus {
-            bindings = <&kp MINUS>;
-            key-positions = <19 18>;
+        SingleQuote {
+            bindings = <&kp LS(MINUS)>;
+            key-positions = <6 7>;
+        };
+
+        DoubleQuote {
+            bindings = <&kp RS(N2)>;
+            key-positions = <7 8>;
         };
     };
 
@@ -111,13 +120,14 @@
             flavor = "tap-preferred";
             quick-tap-ms = <125>;
             global-quick-tap;
-            bindings = <&kp>, <&kp>; 
+            bindings = <&kp>, <&kp>;
         };
 
         hmr_r_ctrl: hmr_r_ctrl {
             compatible = "zmk,behavior-hold-tap";
             label = "hmr_r_ctrl";
             bindings = <&kp>, <&kp>;
+
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             flavor = "balanced";
@@ -130,6 +140,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "hmr_r_shift";
             bindings = <&kp>, <&kp>;
+
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             flavor = "balanced";
@@ -143,6 +154,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "hmr_l_ctrl";
             bindings = <&kp>, <&kp>;
+
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             flavor = "balanced";
@@ -155,6 +167,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "hmr_l_shift";
             bindings = <&kp>, <&kp>;
+
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             flavor = "balanced";
@@ -210,30 +223,33 @@
         };
 
         //1
+
         MARK {
             bindings = <
-&kp NUMBER_1      &kp NUMBER_2  &kp NUMBER_3       &kp NUMBER_4         &kp NUMBER_5                              &kp NUMBER_6      &kp NUMBER_7   &kp NUMBER_8    &kp NUMBER_9       &kp NUMBER_0
-&kp LEFT_BRACKET  &kp JP_PIPE   &kp RIGHT_BRACKET  &kp BACKSLASH        &kp MINUS                                 &kp SINGLE_QUOTE  &kp SEMICOLON  &kp COLON       &kp DOUBLE_QUOTES  &kp LS(MINUS)
-&kp LEFT_SHIFT    &kp PLUS      &kp EQUAL          &kp LC(PAUSE_BREAK)  &kp RIGHT_BRACE                           &kp PIPE          &kp JP_YEN     &kp LS(COMMA)   &kp LS(DOT)        &hm RIGHT_SHIFT JP_UNDERSCORE
-&kp CAPSLOCK      &trans        &hm LEFT_ALT PLUS  &trans               &trans           &kp BACKSPACE    &trans  &trans                           &kp LEFT_BRACE  &trans             &kp PRINTSCREEN
+&kp NUMBER_1      &kp NUMBER_2  &kp NUMBER_3       &kp NUMBER_4         &kp NUMBER_5                              &kp EQUAL   &kp MINUS      &kp RIGHT_BRACKET  &kp BACKSLASH  &kp LEFT_BRACKET
+&kp LEFT_BRACKET  &kp JP_PIPE   &kp RIGHT_BRACKET  &kp BACKSLASH        &kp MINUS                                 &kp LS(N6)  &kp LS(MINUS)  &kp LS(N8)         &kp LS(N9)     &trans
+&kp LEFT_SHIFT    &kp PLUS      &kp EQUAL          &kp LC(PAUSE_BREAK)  &kp RIGHT_BRACE                           &trans      &kp PLUS       &kp RIGHT_BRACE    &kp PIPE       &trans
+&kp CAPSLOCK      &trans        &hm LEFT_ALT PLUS  &trans               &trans           &kp BACKSPACE    &trans  &trans                     &kp LEFT_BRACE     &trans         &kp PRINTSCREEN
             >;
 
             sensor-bindings = <&re_kp C_VOLUME_DOWN C_VOLUME_UP>;
         };
 
         //2
+
         FUNCTION {
             bindings = <
-&kp NUMBER_1           &kp NUMBER_2       &kp NUMBER_3       &kp NUMBER_4  &kp NUMBER_5                                         &kp NUMBER_6  &kp NUMBER_7    &kp NUMBER_8    &kp NUMBER_9  &kp NUMBER_0
-&kp F1                 &kp F2             &kp F3             &kp F4        &kp F5                                               &kp F6        &kp F7          &kp F8          &kp F9        &kp F10
-&hm LEFT_SHIFT HOME    &kp LC(PAGE_UP)  &kp LC(PAGE_DOWN)    &kp END       &kp F11                                              &kp F12       &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW
-&hm LEFT_SHIFT ESCAPE  &kp LEFT_WIN       &hm LEFT_ALT PLUS  &trans        &hm LEFT_CONTROL SPACE  &kp BACKSPACE    &kp DELETE  &trans                        &trans          &trans        &hm RIGHT_SHIFT BACKSLASH
+&kp NUMBER_1           &kp NUMBER_2     &kp NUMBER_3       &kp NUMBER_4  &kp NUMBER_5                                         &kp NUMBER_6  &kp NUMBER_7    &kp NUMBER_8    &kp NUMBER_9  &kp NUMBER_0
+&kp F1                 &kp F2           &kp F3             &kp F4        &kp F5                                               &kp F6        &kp F7          &kp F8          &kp F9        &kp F10
+&hm LEFT_SHIFT HOME    &kp LC(PAGE_UP)  &kp LC(PAGE_DOWN)  &kp END       &kp F11                                              &kp F12       &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW
+&hm LEFT_SHIFT ESCAPE  &kp LEFT_WIN     &hm LEFT_ALT PLUS  &trans        &hm LEFT_CONTROL SPACE  &kp BACKSPACE    &kp DELETE  &trans                        &trans          &trans        &hm RIGHT_SHIFT BACKSLASH
             >;
 
             sensor-bindings = <&mouse_scrl SCRL_DOWN SCRL_UP>;
         };
 
         //3
+
         CURSOR {
             bindings = <
 &trans  &kp LG(LC(LEFT_ARROW))  &kp LG(TAB)  &kp LC(LG(RIGHT_ARROW))  &kp K_MUTE                    &trans  &trans          &kp UP_ARROW    &trans           &trans
@@ -246,6 +262,7 @@
         };
 
         //4
+
         AML {
             bindings = <
 &trans  &trans  &trans  &trans  &trans                    &trans           &trans      &trans              &trans               &trans
@@ -256,6 +273,7 @@
         };
 
         //5
+
         MOUSE {
             bindings = <
 &trans          &trans  &trans  &trans  &trans                       &trans           &trans      &trans              &trans               &trans
@@ -266,6 +284,7 @@
         };
 
         //6
+
         SCROLL {
             bindings = <
 &trans    &kp LC(LG(LEFT_ARROW))  &kp UP_ARROW  &kp LC(LG(RIGHT_ARROW))  &trans                    &kp KP_MULTIPLY  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp KP_PLUS
@@ -278,6 +297,7 @@
         };
 
         //7
+
         WIRELESS {
             bindings = <
 &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                         &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
