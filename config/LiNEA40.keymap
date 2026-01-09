@@ -9,6 +9,7 @@
 #include <dt-bindings/zmk/pointing.h>
 
 // レイヤー定義
+
 #define MARK 1
 #define FUNCTION 2
 #define CURSOR 3
@@ -18,11 +19,13 @@
 #define WIRELESS 7
 
 // 日本語キー定義
+
 #define JP_YEN          0x89              // ¥
 #define JP_PIPE         LS(0x89)          // |
 #define JP_UNDERSCORE   LS(0x87)          // _
 
 //mouse cursol
+
 &mmv {
     delay-ms = <20>;
     trigger-period-ms = <5>;
@@ -31,6 +34,7 @@
 };
 
 //mouse scroll
+
 &msc {
     delay-ms = <3>;
     trigger-period-ms = <3>;
@@ -70,6 +74,7 @@
 };
 
 //input key
+
 &mkp_input_listener { input-processors = <&zip_temp_layer 4 500>; };
 
 / {
@@ -228,10 +233,10 @@
 
         MARK {
             bindings = <
-&trans      &trans             &trans      &trans      &trans                                        &kp EQUAL    &kp LEFT_BRACE  &kp RIGHT_BRACKET  &kp BACKSLASH  &kp LEFT_BRACKET
-&kp RS(N1)  &kp RS(N2)         &kp RS(N3)  &kp RS(N4)  &kp RS(N5)                                    &kp LS(N6)   &kp LS(N7)      &kp LS(N8)         &kp LS(N9)     &kp JP_UNDERSCORE
-&kp SLASH   &kp DOUBLE_QUOTES  &kp MINUS   &kp COLON   &kp LC(PAUSE_BREAK)                           &kp JP_PIPE  &kp PLUS        &kp RIGHT_BRACE    &kp PIPE       &kp JP_YEN
-&trans      &trans             &trans      &trans      &trans               &kp BACKSPACE    &trans  &trans                       &trans             &trans         &kp PRINTSCREEN
+&trans      &kp LC(LG(LEFT_ARROW))  &kp LG(TAB)  &kp LC(LG(RIGHT_ARROW))  &trans                                        &kp EQUAL    &kp LEFT_BRACE  &kp RIGHT_BRACKET  &kp BACKSLASH  &kp LEFT_BRACKET
+&kp RS(N1)  &kp RS(N2)              &kp RS(N3)   &kp RS(N4)               &kp RS(N5)                                    &kp LS(N6)   &kp LS(N7)      &kp LS(N8)         &kp LS(N9)     &kp JP_UNDERSCORE
+&kp SLASH   &kp DOUBLE_QUOTES       &kp MINUS    &kp COLON                &kp LC(PAUSE_BREAK)                           &kp JP_PIPE  &kp PLUS        &kp RIGHT_BRACE    &kp PIPE       &kp JP_YEN
+&trans      &trans                  &trans       &trans                   &trans               &kp BACKSPACE    &trans  &trans                       &trans             &trans         &kp PRINTSCREEN
             >;
 
             sensor-bindings = <&re_kp C_VOLUME_DOWN C_VOLUME_UP>;
@@ -241,10 +246,10 @@
 
         FUNCTION {
             bindings = <
-&kp NUMBER_1                &kp NUMBER_2     &kp NUMBER_3       &kp NUMBER_4          &kp NUMBER_5                                         &kp NUMBER_6  &kp NUMBER_7          &kp NUMBER_8    &kp NUMBER_9  &kp NUMBER_0
-&hmr_l_shift LEFT_SHIFT F1  &kp F2           &kp F3             &hmr_l_ctrl LCTRL F4  &kp F5                                               &kp F6        &hmr_r_ctrl RCTRL F7  &kp F8          &kp F9        &hmr_r_shift RIGHT_SHIFT F10
-&kp HOME                    &kp LC(PAGE_UP)  &kp LC(PAGE_DOWN)  &kp END               &kp F11                                              &kp F12       &kp LEFT_ARROW        &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW
-&kp ESC                     &kp LEFT_WIN     &kp LEFT_ALT       &trans                &hm LEFT_CONTROL SPACE  &kp BACKSPACE    &kp DELETE  &trans                              &trans          &trans        &hm RIGHT_SHIFT BACKSLASH
+&kp NUMBER_1                  &kp NUMBER_2     &kp NUMBER_3       &kp NUMBER_4          &kp NUMBER_5                                         &kp NUMBER_6  &kp NUMBER_7          &kp NUMBER_8    &kp NUMBER_9  &kp NUMBER_0
+&hmr_l_shift LEFT_SHIFT F1    &kp F2           &kp F3             &hmr_l_ctrl LCTRL F4  &kp F5                                               &kp F6        &hmr_r_ctrl RCTRL F7  &kp F8          &kp F9        &hmr_r_shift RIGHT_SHIFT F10
+&hmr_l_shift LEFT_SHIFT HOME  &kp LC(PAGE_UP)  &kp LC(PAGE_DOWN)  &kp END               &kp F11                                              &kp F12       &kp LEFT_ARROW        &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW
+&kp ESC                       &kp LEFT_WIN     &kp LEFT_ALT       &trans                &hm LEFT_CONTROL SPACE  &kp BACKSPACE    &kp DELETE  &trans                              &trans          &trans        &hm RIGHT_SHIFT BACKSLASH
             >;
 
             sensor-bindings = <&mouse_scrl SCRL_DOWN SCRL_UP>;
