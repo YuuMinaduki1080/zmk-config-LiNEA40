@@ -115,13 +115,14 @@
     behaviors {
         hm: hold_tap_mods {
             compatible = "zmk,behavior-hold-tap";
-            label = "homehow-mods";
-            #binding-cells = <2>;
-            tapping-term-ms = <150>;
-            flavor = "tap-preferred";
-            quick-tap-ms = <125>;
-            global-quick-tap;
+            label = "homerow-mods";
             bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "balanced";
+            quick-tap-ms = <150>;
+            require-prior-idle-ms = <150>;
         };
 
         hmr_l_ctrl: hmr_l_ctrl {
