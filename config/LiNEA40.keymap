@@ -9,7 +9,6 @@
 #include <dt-bindings/zmk/pointing.h>
 
 // レイヤー定義
-
 #define MARK 1
 #define FUNCTION 2
 #define CURSOR 3
@@ -19,13 +18,11 @@
 #define WIRELESS 7
 
 // 日本語キー定義
-
 #define JP_YEN          0x89              // ¥
 #define JP_PIPE         LS(0x89)          // |
 #define JP_UNDERSCORE   LS(0x87)          // _
 
-//mouse cursol
-
+//mouse cursoll
 &mmv {
     delay-ms = <20>;
     trigger-period-ms = <5>;
@@ -34,7 +31,6 @@
 };
 
 //mouse scroll
-
 &msc {
     delay-ms = <3>;
     trigger-period-ms = <3>;
@@ -67,8 +63,7 @@
         input-processors =
             <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
             <&zip_xy_to_scroll_mapper>,
-            <&zip_wheel_scaler 1 4>;
- //スクロールを1/4倍速にする
+            <&zip_wheel_scaler 1 4>; //スクロールを1/4倍速にする
     };
 };
 
@@ -220,7 +215,7 @@
         default_layer {
             bindings = <
 &kp Q                      &kp W         &kp E         &kp R                &kp T                                                  &kp Y        &kp U                &kp I      &kp O    &kp P
-&hmr_l_shift LEFT_SHIFT A  &kp S         &kp D         &hmr_l_ctrl LCTRL F  &kp G                                                  &kp H        &hmr_r_ctrl RCTRL J  &kp K      &kp L    &hmr_r_shift RIGHT_SHIFT MINUS
+&kp A                      &kp S         &kp D         &hmr_l_ctrl LCTRL F  &kp G                                                  &kp H        &hmr_r_ctrl RCTRL J  &kp K      &kp L    &kp MINUS
 &hmr_l_shift LEFT_SHIFT Z  &kp X         &kp C         &kp V                &kp B                                                  &kp N        &kp M                &kp COMMA  &kp DOT  &hmr_r_shift LEFT_SHIFT SLASH
 &kp ESC                    &kp LEFT_WIN  &kp LEFT_ALT  &trans               &hm LEFT_CONTROL SPACE  &kp BACKSPACE    &lt 1 DELETE  &lt 2 ENTER                       &mo 7      &to 3    &to 5
             >;
@@ -246,7 +241,7 @@
         FUNCTION {
             bindings = <
 &kp NUMBER_1                  &kp NUMBER_2     &kp NUMBER_3       &kp NUMBER_4          &kp NUMBER_5                                         &kp NUMBER_6  &kp NUMBER_7          &kp NUMBER_8    &kp NUMBER_9  &kp NUMBER_0
-&hmr_l_shift LEFT_SHIFT F1    &kp F2           &kp F3             &hmr_l_ctrl LCTRL F4  &kp F5                                               &kp F6        &hmr_r_ctrl RCTRL F7  &kp F8          &kp F9        &hmr_r_shift RIGHT_SHIFT F10
+&kp F1                        &kp F2           &kp F3             &hmr_l_ctrl LCTRL F4  &kp F5                                               &kp F6        &hmr_r_ctrl RCTRL F7  &kp F8          &kp F9        &kp F10
 &hmr_l_shift LEFT_SHIFT HOME  &kp LC(PAGE_UP)  &kp LC(PAGE_DOWN)  &kp END               &kp F11                                              &kp F12       &kp LEFT_ARROW        &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW
 &kp ESC                       &kp LEFT_WIN     &kp LEFT_ALT       &trans                &hm LEFT_CONTROL SPACE  &kp BACKSPACE    &kp DELETE  &trans                              &trans          &trans        &hm RIGHT_SHIFT BACKSLASH
             >;
