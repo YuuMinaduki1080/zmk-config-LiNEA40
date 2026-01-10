@@ -74,13 +74,18 @@
 &zip_temp_layer {
     require-prior-idle-ms = <500>;
     excluded-positions = <
+        10 // Left_Shift
+        13 // Left_Ctrl
         15 // H
         16 // J
         17 // K
         18 // L
         19 // -
+        20 // Left_Shift
         26 // Alt + F4
         27 // Alt + Left_Arrow
         28 // Alt + Right_Arrow
+        32 // Left_Alt
+        34 // Left_Ctrl
     >;
 };
