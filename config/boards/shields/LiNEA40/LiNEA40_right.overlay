@@ -72,7 +72,7 @@
 };
 
 &zip_temp_layer {
-    require-prior-idle-ms = <500>;
+    require-prior-idle-ms = <200>;
     excluded-positions = <
         13 // Left_Ctrl
         15 // H
