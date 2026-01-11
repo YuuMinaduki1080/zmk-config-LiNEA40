@@ -69,7 +69,7 @@
 
 //input key
 
-&mkp_input_listener { input-processors = <&zip_temp_layer 4 500>; };
+&mkp_input_listener { input-processors = <&zip_temp_layer 4 200>; };
 
 / {
     combos {
