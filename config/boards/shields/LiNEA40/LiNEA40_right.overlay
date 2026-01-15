@@ -79,13 +79,8 @@
         17 // K
         18 // L
         19 // -
-        20 // Left_Shift
-        23 // Left_Ctrl
         26 // Alt + F4
         27 // Alt + Left_Arrow
         28 // Alt + Right_Arrow
-        32 // Left_Alt
-        34 // Left_Sum_Ctrl
-        35 // Left_Sum_Shift
     >;
 };
