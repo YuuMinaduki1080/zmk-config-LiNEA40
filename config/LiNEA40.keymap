@@ -9,7 +9,6 @@
 #include <dt-bindings/zmk/pointing.h>
 
 // レイヤー定義
-
 #define MARK 1
 #define FUNCTION 2
 #define CURSOR 3
@@ -19,13 +18,11 @@
 #define WIRELESS 7
 
 // 日本語キー定義
-
 #define JP_YEN          0x89              // ¥
 #define JP_PIPE         LS(0x89)          // |
 #define JP_UNDERSCORE   LS(0x87)          // _
 
 //mouse cursoll
-
 &mmv {
     delay-ms = <20>;
     trigger-period-ms = <5>;
@@ -34,7 +31,6 @@
 };
 
 //mouse scroll
-
 &msc {
     delay-ms = <3>;
     trigger-period-ms = <3>;
@@ -67,14 +63,11 @@
         input-processors =
             <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
             <&zip_xy_to_scroll_mapper>,
-            <&zip_wheel_scaler 1 4>;
-
-        //スクロールを1/4倍速にする
+            <&zip_wheel_scaler 1 4>; //スクロールを1/4倍速にする
     };
 };
 
 //input key
-
 &mkp_input_listener { input-processors = <&zip_temp_layer 4 200>; };
 
 / {
@@ -108,7 +101,7 @@
 
         Colon {
             bindings = <&kp SINGLE_QUOTE>;
-            key-positions = <6 7>;
+            key-positions = <6 7>;j
         };
 
         Semicolon {
@@ -118,10 +111,17 @@
     };
 
     behaviors {
+        tog_off: toggle_layer_off {
+            compatible = "zmk,behavior-toggle-layer";
+            #binding-cells = <1>;
+            display-name = "Toggle Layer Off";
+            toggle-mode = "off";
+        };
+
         hmr_sum_ctrl: hmr_sum_ctrl {
             compatible = "zmk,behavior-hold-tap";
             label = "hmr_sum_ctrl";
-            bindings = <&kp>, <&kp>;
+            bindings = <&kp>, <&kp_exit_AML>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
@@ -133,7 +133,7 @@
         hmr_sum_shift: hmr_sum_shift {
             compatible = "zmk,behavior-hold-tap";
             label = "hmr_sum_shift";
-            bindings = <&kp>, <&kp>;
+            bindings = <&kp>, <&kp_exit_AML>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
@@ -145,7 +145,7 @@
         hmr_l_ctrl: hmr_l_ctrl {
             compatible = "zmk,behavior-hold-tap";
             label = "hmr_l_ctrl";
-            bindings = <&kp>, <&kp>;
+            bindings = <&kp>, <&kp_exit_AML>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
@@ -159,7 +159,7 @@
         hmr_l_shift: hmr_l_shift {
             compatible = "zmk,behavior-hold-tap";
             label = "hmr_l_shift";
-            bindings = <&kp>, <&kp>;
+            bindings = <&kp>, <&kp_exit_AML>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
@@ -175,7 +175,7 @@
         hmr_r_ctrl: hmr_r_ctrl {
             compatible = "zmk,behavior-hold-tap";
             label = "hmr_r_ctrl";
-            bindings = <&kp>, <&kp>;
+            bindings = <&kp>, <&kp_exit_AML>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
@@ -189,7 +189,7 @@
         hmr_r_shift: hmr_r_shift {
             compatible = "zmk,behavior-hold-tap";
             label = "hmr_r_shift";
-            bindings = <&kp>, <&kp>;
+            bindings = <&kp>, <&kp_exit_AML>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
@@ -230,6 +230,24 @@
             #binding-cells = <0>;
             bindings = <&kp DOWN_ARROW &kp SPACE>;
             label = "DOWN_SPACE";
+        };
+
+        exit_AML: exit_AML {
+            compatible = "zmk,behavior-macro";
+            wait-ms = <0>;
+            tap-ms = <0>;
+            #binding-cells = <0>;
+            bindings = <&tog_off AML>;
+            label = "exit_AML";
+        };
+
+        kp_exit_AML: kp_exit_AML {
+            compatible = "zmk,behavior-macro-one-param";
+            wait-ms = <0>;
+            tap-ms = <0>;
+            #binding-cells = <1>;
+            bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER &exit_AML>;
+            label = "KP_exit_AML";
         };
     };
 
