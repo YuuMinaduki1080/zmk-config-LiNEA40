@@ -19,7 +19,7 @@
         compatible = "zmk,input-listener";
         device = <&trackball>;
 
-        input-processors = <&zip_temp_layer 4 200>;
+        input-processors = <&zip_temp_layer 4 300>;
     };
 };
 
@@ -74,17 +74,18 @@
 &zip_temp_layer {
     require-prior-idle-ms = <200>;
     excluded-positions = <
-        13 // Left_Ctrl
         15 // H
         16 // J
         17 // K
         18 // L
         19 // -
         20 // Left_Shift
+        23 // Left_Ctrl
         26 // Alt + F4
         27 // Alt + Left_Arrow
         28 // Alt + Right_Arrow
         32 // Left_Alt
-        34 // Left_Ctrl
+        34 // Left_Sum_Ctrl
+        35 // Left_Sum_Shift
     >;
 };
