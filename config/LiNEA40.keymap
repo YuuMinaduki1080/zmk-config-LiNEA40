@@ -68,7 +68,8 @@
             <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
             <&zip_xy_to_scroll_mapper>,
             <&zip_wheel_scaler 1 4>;
- //スクロールを1/4倍速にする
+
+        //スクロールを1/4倍速にする
     };
 };
 
@@ -289,10 +290,10 @@
 
         AML {
             bindings = <
-&trans          &trans  &trans  &trans     &trans                       &trans           &trans      &trans              &trans               &trans
-&trans          &trans  &trans  &kp LCTRL  &trans                       &kp LS(LC(TAB))  &mkp MB1    &mkp MB2            &mo 6                &kp LC(TAB)
-&kp LEFT_SHIFT  &trans  &trans  &trans     &trans                       &trans           &kp LC(F4)  &kp LA(LEFT_ARROW)  &kp LA(RIGHT_ARROW)  &trans
-&trans          &trans  &trans  &trans     &kp LCTRL  &trans    &trans  &trans                       &trans              &trans               &trans
+&trans  &trans  &trans  &trans  &trans                    &trans           &trans      &trans              &trans               &trans
+&trans  &trans  &trans  &trans  &trans                    &kp LS(LC(TAB))  &mkp MB1    &mkp MB2            &mo 6                &kp LC(TAB)
+&trans  &trans  &trans  &trans  &trans                    &trans           &kp LC(F4)  &kp LA(LEFT_ARROW)  &kp LA(RIGHT_ARROW)  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans                       &trans              &trans               &trans
             >;
         };
 
