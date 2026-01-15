@@ -101,7 +101,7 @@
 
         Colon {
             bindings = <&kp SINGLE_QUOTE>;
-            key-positions = <6 7>;j
+            key-positions = <6 7>;
         };
 
         Semicolon {
