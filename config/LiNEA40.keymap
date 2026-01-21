@@ -74,14 +74,24 @@
     combos {
         compatible = "zmk,combos";
 
-        HankakuZenkaku {
-            bindings = <&kp CAPSLOCK>;
-            key-positions = <12 13>;
+        Colon {
+            bindings = <&kp SINGLE_QUOTE>;
+            key-positions = <6 7>;
+        };
+
+        Semicolon {
+            bindings = <&kp SEMICOLON>;
+            key-positions = <7 8>;
         };
 
         Tab {
             bindings = <&kp TAB>;
             key-positions = <11 12>;
+        };
+
+        HankakuZenkaku {
+            bindings = <&kp CAPSLOCK>;
+            key-positions = <12 13>;
         };
 
         Minus {
@@ -99,14 +109,9 @@
             key-positions = <18 19>;
         };
 
-        Colon {
-            bindings = <&kp SINGLE_QUOTE>;
-            key-positions = <6 7>;
-        };
-
-        Semicolon {
-            bindings = <&kp SEMICOLON>;
-            key-positions = <7 8>;
+        pipe {
+            bindings = <&kp JP_PIPE>;
+            key-positions = <25 26>;
         };
     };
 
