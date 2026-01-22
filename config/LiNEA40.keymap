@@ -94,8 +94,8 @@
             key-positions = <12 13>;
         };
 
-        Minus {
-            bindings = <&kp MINUS>;
+        pipe {
+            bindings = <&kp JP_PIPE>;
             key-positions = <16 17>;
         };
 
@@ -107,11 +107,6 @@
         Underscore {
             bindings = <&kp JP_UNDERSCORE>;
             key-positions = <18 19>;
-        };
-
-        pipe {
-            bindings = <&kp JP_PIPE>;
-            key-positions = <26 27>;
         };
     };
 
