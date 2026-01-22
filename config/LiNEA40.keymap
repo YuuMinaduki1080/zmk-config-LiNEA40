@@ -263,10 +263,10 @@
 
         MARK {
             bindings = <
-&trans      &kp LC(LG(LEFT_ARROW))  &kp LG(TAB)  &kp LC(LG(RIGHT_ARROW))  &trans                                        &kp EQUAL    &kp LEFT_BRACE  &kp RIGHT_BRACKET  &kp BACKSLASH  &kp LEFT_BRACKET
-&kp RS(N1)  &kp RS(N2)              &kp RS(N3)   &kp RS(N4)               &kp RS(N5)                                    &kp LS(N6)   &kp LS(N7)      &kp LS(N8)         &kp LS(N9)     &kp JP_UNDERSCORE
-&kp SLASH   &kp DOUBLE_QUOTES       &kp MINUS    &kp COLON                &kp LC(PAUSE_BREAK)                           &kp JP_PIPE  &kp PLUS        &kp RIGHT_BRACE    &kp PIPE       &kp JP_YEN
-&trans      &trans                  &trans       &trans                   &trans               &kp BACKSPACE    &trans  &trans                       &trans             &trans         &kp PRINTSCREEN
+&trans               &kp LC(LG(LEFT_ARROW))  &kp LG(TAB)  &kp LC(LG(RIGHT_ARROW))  &trans                                        &kp EQUAL    &kp LEFT_BRACE  &kp RIGHT_BRACKET  &kp BACKSLASH    &kp LEFT_BRACKET
+&kp RS(N1)           &kp RS(N2)              &kp RS(N3)   &kp RS(N4)               &kp RS(N5)                                    &kp LS(N6)   &kp LS(N7)      &kp LS(N8)         &kp LS(N9)       &kp JP_UNDERSCORE
+&kp SLASH            &kp DOUBLE_QUOTES       &kp MINUS    &kp COLON                &kp LC(PAUSE_BREAK)                           &kp JP_PIPE  &kp PLUS        &kp RIGHT_BRACE    &kp PIPE         &kp JP_YEN
+&kp RA(PRINTSCREEN)  &kp PRINTSCREEN         &trans       &trans                   &trans               &kp BACKSPACE    &trans  &trans                       &trans             &kp PRINTSCREEN  &kp LA(PRINTSCREEN)
             >;
 
             sensor-bindings = <&re_kp C_VOLUME_DOWN C_VOLUME_UP>;
