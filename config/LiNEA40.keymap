@@ -278,7 +278,7 @@
             bindings = <
 &kp NUMBER_1                  &kp NUMBER_2     &kp NUMBER_3       &kp NUMBER_4  &kp NUMBER_5                                                                         &kp NUMBER_6  &kp NUMBER_7    &kp NUMBER_8    &kp NUMBER_9  &kp NUMBER_0
 &kp F1                        &kp F2           &kp F3             &kp F4        &kp F5                                                                               &kp F6        &kp F7          &kp F8          &kp F9        &kp F10
-&hmr_l_shift LEFT_SHIFT HOME  &kp LC(PAGE_UP)  &kp LC(PAGE_DOWN)  &kp END       &kp F11                                                                              &kp F12       &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &hmr_r_shift RIGHT_SHIFT RIGHT_ARROW
+&hmr_l_shift LEFT_SHIFT HOME  &kp LC(PAGE_UP)  &kp LC(PAGE_DOWN)  &kp END       &kp F11                                                                              &kp F12       &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW
 &kp ESC                       &kp LEFT_WIN     &kp LEFT_ALT       &trans        &hmr_sum_ctrl LEFT_CONTROL SPACE  &hmr_sum_shift LEFT_SHIFT BACKSPACE    &kp DELETE  &trans                        &trans          &trans        &kp BACKSLASH
             >;
 
