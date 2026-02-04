@@ -108,6 +108,11 @@
             bindings = <&kp JP_UNDERSCORE>;
             key-positions = <18 19>;
         };
+
+        Namisen {
+            bindings = <&kp PLUS>;
+            key-positions = <27 28>;
+        };
     };
 
     behaviors {
